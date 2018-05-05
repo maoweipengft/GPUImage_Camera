@@ -1,0 +1,35 @@
+//
+//  PrefixHeader.pch
+//  GPUImage_Camera
+//
+//  Created by weipeng.mao on 2018/5/4.
+//  Copyright © 2018年 weipeng.mao. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#import <GPUImage.h>
+#import <Masonry.h>
+#import "CameraTool.h"
+
+#define KfontWidth(value) ((value)/375.0f*[UIScreen mainScreen].bounds.size.width)
+#define KfontHeight(value) ((value)/667.0f*[UIScreen mainScreen].bounds.size.height)
+
+//尺寸常量
+#define kScreenWidth    ([UIScreen mainScreen].bounds.size.width)
+#define kScreenHeight   ([UIScreen mainScreen].bounds.size.height)
+
+//iPhone x 适配
+#define topBarHetght    ([[UIApplication sharedApplication] statusBarFrame].size.height) //电池栏高度
+#define TabbarHeight     ([[UIApplication sharedApplication] statusBarFrame].size.height>20?83:49)//底部bar高度
+
+//Xcode8 控制台打印不全的问题
+#ifdef DEBUG
+#define SLog(format, ...) printf("class: <%p %s:(%d) > method: %s \n%s\n", self, [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, __PRETTY_FUNCTION__, [[NSString stringWithFormat:(format), ##__VA_ARGS__] UTF8String] )
+#else
+#define SLog(format, ...)
+
+
+#endif
+
+#endif /* PrefixHeader_pch */

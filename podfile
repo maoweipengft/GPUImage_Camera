@@ -1,0 +1,6 @@
+platform :ios, ‘8.0’
+
+target 'GPUImage_Camera’ do
+pod 'Masonry', '~> 1.1.0'
+pod 'GPUImage', '~> 0.1.7'
+end
